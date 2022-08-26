@@ -1,30 +1,6 @@
 public class App {
     public static void main(String[] args) {
-
-        Character  knight = new Character();
-
-        knight.strength = 10;
-        knight.agility = 5;
-        knight.intelligence = 0;
-        knight.name = "Chen";
-        knight.sayMyName();
-
-        Character mage = new Character();
-
-        mage.strength = 0;
-        mage.agility = 5;
-        mage.intelligence = 10;
-        mage.name = "Akasha";
-        mage.sayMyName();
-
-        Character thief = new Character();
-
-        thief.strength = 5;
-        thief.agility = 10;
-        thief.intelligence = 0;
-        thief.name = "Gondar";
-        thief.sayMyName();
-
+        //Character Class
         Character assasin = new Character();
         assasin.strength = 5;
         assasin.agility = 10;
@@ -65,6 +41,58 @@ public class App {
         support.sayMyStrength();
         support.sayMyAgility();
         support.sayMyIntelligence();
+        
+        //Enemy class
+        Enemy boss = new Enemy();
+
+        boss.damage = 1000;
+        boss.health = 1000;
+        boss.armor = 500;
+        boss.hasMagicImmunity = true;
+        boss.name = "Thanos";
+        boss.enemyDialogue();
+
+        Enemy goblin = new Enemy();
+
+        goblin.damage = 500;
+        goblin.health = 300;
+        goblin.armor = 200;
+        goblin.hasMagicImmunity = false;
+        goblin.name = "Green Goblin";
+        goblin.enemyDialogue();
+
+        Enemy symbiote = new Enemy();
+
+        symbiote.damage = 1000;
+        symbiote.health = 500;
+        symbiote.armor = 300;
+        symbiote.hasMagicImmunity = false;
+        symbiote.name = "Venom";
+        symbiote.enemyDialogue();
+
+        Weapon infinitygauntlet = new Weapon("Infinity Gauntlet", 1000, 500, "Legendary", "Powerful to destroy all living creatures.");
+
+        infinitygauntlet.displayName();
+        infinitygauntlet.displayDamage();
+        infinitygauntlet.displayWeight();
+        infinitygauntlet.displayRarity();
+        infinitygauntlet.displayWeaponDescription();
+
+        Weapon bomb = new Weapon("Pumpkin Bomb", 500, 2, "Rare", "A bomb powerful enough to destroy Spiderman.");
+
+        bomb.displayName();
+        bomb.displayDamage();
+        bomb.displayWeight();
+        bomb.displayRarity();
+        bomb.displayWeaponDescription();
+
+        Weapon black = new Weapon("Symbiote", 1000, 0, "Epic", "A black suited figure suit that matches the power of Spiderman.");
+
+        black.displayName();
+        black.displayDamage();
+        black.displayWeight();
+        black.displayRarity();
+        black.displayWeaponDescription();
 
     }
 }
